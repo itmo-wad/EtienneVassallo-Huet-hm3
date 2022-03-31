@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    <h1 style="text-align: center;">Write your post</h1> <br>
+{% endblock %}
+
+{% block content %} 
+    <form action="/post" method="post" enctype="multipart/form-data" >
+        <div>
+            <textarea name="text" id="text" class="form-control"></textarea> <br>
+        </div>
+        <br><br>
+        <div style="text-align: center;">
+            <button type="submit" class='btn btn-lg btn-primary'>POST</button>
+        </div>
+    </form>
+
+{% endblock %}
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+    <body>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %} 
+
+        <form action="/post" method="post" enctype="multipart/form-data" >
+            <div>
+                <textarea name="text" id="text"></textarea>
+            </div>
+            <br><br>
+            </div>
+                <input type="submit" value="Post">
+            </div>
+        </form>
+    </body>
+</html> -->

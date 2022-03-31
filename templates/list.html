@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+
+{% block title %} 
+    <div style="text-align: center;">
+        <h1>CHAT</h1>
+    </div>
+{% endblock %}
+
+{% block content %} 
+    <hr>
+    {% for post in posts %}
+        <div style="text-align: center;">
+            <p>{{ post['post'] }} <i>({{ post['writter'] }})</i> <i> time : ({{ post['time'] }})</i></p>
+        </div>
+    {% endfor %}
+    <hr>
+    <p style="text-align: center; color: grey;"> <i> In order to write a post you should first log in <br> If you have never created yourself an account, you should should sign in, and then log in </i></p>
+
+{% endblock %}

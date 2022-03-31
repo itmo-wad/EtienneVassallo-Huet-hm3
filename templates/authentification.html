@@ -1,0 +1,76 @@
+
+{% extends "base.html" %}
+
+{% block title %} 
+    <h1 style="text-align: center;">Please log in</h1> <br>
+{% endblock %}
+
+
+
+
+{% block content %} 
+    <form action="/auth" method="POST">
+        <div class="form-group">
+            <label for="User name">Name :</label>
+            <input 
+            type="text" 
+            name="fname" 
+            class="form-control"
+            placeholder= "Enter your name">
+
+            <label for="Password">Password&nbsp;:</label>
+            <input 
+            type="password" 
+            name="lname" 
+            class="form-control"
+            placeholder="Enter your password">
+
+            <br><br>
+            <div align="center">
+                <button class="btn btn-primary" type="submit" value="Sign In" class="login-form-submit"> Log in </button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
+
+
+
+<!--<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link href="static/css/style.css" rel="stylesheet">
+      </head>
+    <body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %} 
+        <h1>Please authentificate yourself</h1>
+        {{session['logged_in']}}
+        <form action="/mypage" method="POST">
+            <div>
+                <label for="User name" class="text">Name :</label>
+                <input type="text" name="fname" class="login-form-field" width=70px>
+            </div><br>
+            <div>
+                <label for="Password">Password&nbsp;:</label>
+                <input type="text" name="lname" class="login-form-field">
+            </div>
+            <div>
+                <input type="submit" value="Log In" class="login-form-submit" style="height:50px; width:50px">
+            </div>
+            <div><img src="static/Photos/ItmoPic.png" alt="Italian Trulli", width="800" height="400"></div>
+        </form>
+
+    </body>
+</html> -->
